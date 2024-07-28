@@ -1,0 +1,35 @@
+Adapter Pattern:
+
+Use Case: Legacy System Integration
+Scenario: A company has an old payment processing system that they want to integrate with a new e-commerce platform. The legacy system uses a different interface and protocol than the new system.
+Pattern Application: The Adapter pattern can be used to create an adapter class that implements the interface expected by the new e-commerce platform and translates the calls into the format understood by the legacy payment system. This allows the new system to interact with the old system without modifying its code.
+Example:
+python
+Copy code
+# Old payment system
+class OldPaymentSystem:
+    def process_old_payment(self, amount):
+        print(f"Processing payment of {amount} using old system.")
+
+# New payment interface
+class NewPaymentInterface:
+    def process_payment(self, amount):
+        pass
+
+# Adapter
+class PaymentAdapter(NewPaymentInterface):
+    def __init__(self, old_system):
+        self.old_system = old_system
+
+    def process_payment(self, amount):
+        self.old_system.process_old_payment(amount)
+
+# Usage
+old_system = OldPaymentSystem()
+adapter = PaymentAdapter(old_system)
+adapter.process_payment(100)
+Decorator Pattern:
+
+Use Case: Adding Features to a Notification System
+Scenario: A notification system needs to send basic notifications, but over time, new requirements emerge such as sending notifications with attachments, logging notifications, and formatting notifications with HTML.
+Pattern Application: The Decorator pattern allows behavior to be added to individual 

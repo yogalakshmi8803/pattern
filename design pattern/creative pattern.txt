@@ -1,0 +1,11 @@
+Singleton Pattern:
+
+Use Case: Configuration Manager
+Scenario: In a large-scale enterprise application, there is a need to manage configuration settings that are shared across multiple modules and components. These settings need to be accessed and modified in a centralized manner.
+Pattern Application: The Singleton pattern ensures that a class has only one instance and provides a global point of access to it. A ConfigurationManager class can be implemented as a Singleton to ensure that all parts of the application use the same configuration settings, preventing inconsistency and potential conflicts.
+Factory Method Pattern:
+
+Use Case: Document Creation in an Office Suite
+Scenario: An office suite software needs to support the creation of different types of documents such as Word documents, Excel spreadsheets, and PowerPoint presentations. Each document type has its own specific creation process.
+Pattern Application: The Factory Method pattern can be used to define an interface for creating an object but allows subclasses to alter the type of objects that will be created. An abstract DocumentFactory class can define a method createDocument(), and concrete subclasses such as WordDocumentFactory, ExcelDocumentFactory, and PowerPointDocumentFactory can implement this method to create specific types of documents.
+These examples illustrate how creational design patterns can provide solutions for creating objects in a way that enhances flexibility and reusability in software design.

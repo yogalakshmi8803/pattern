@@ -1,0 +1,10 @@
+ Observer Pattern:
+
+Use Case: Notification System
+Scenario: Imagine a social media platform where users can follow each other. When a user posts a new message or update, all their followers need to be notified instantly.
+Pattern Application: Here, the Observer pattern can be applied. The user who posts updates acts as the "subject" (or "observable"), and their followers act as "observers." When the user posts, all observers (followers) are notified automatically.
+Strategy Pattern:
+
+Use Case: Payment Methods in E-commerce
+Scenario: In an online shopping application, customers can choose different payment methods such as credit card, PayPal, or cryptocurrency.
+Pattern Application: The Strategy pattern can be used here to define a family of algorithms (payment methods) and encapsulate each one into separate classes. The customer can then choose a payment strategy at runtime, and the application can switch between these strategies seamlessly.                                                                                                   
